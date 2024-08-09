@@ -1,5 +1,14 @@
 ## Hi there 👋
 
+// sdp dependancy and binding
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.1'
+
+
   // api
   
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
