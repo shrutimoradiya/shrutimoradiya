@@ -27,6 +27,21 @@
         }
     }
 
+// setFragment
+
+         private fun setFragment(frag: Fragment) {
+        this.frag1 = frag
+        for (fragment2 in supportFragmentManager.fragments) {
+            supportFragmentManager.beginTransaction().remove(fragment2).commit()
+        }
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, frag)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+            .commitNow()
+    }
+
+
     
 <!--
 **shrutimoradiya/shrutimoradiya** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
